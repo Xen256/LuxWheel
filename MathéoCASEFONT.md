@@ -6,3 +6,5 @@
 - Ajout de ce fichier compte rendu
 - Création du répertoire "Code"
 - Ajout de la liste des composants
+- Ajout du code luxmètre
+- Modification du README

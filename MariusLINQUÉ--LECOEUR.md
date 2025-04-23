@@ -1,2 +1,2 @@
 Deuxieme séance : tentative de création d'un powerpoint 
-
+Modification du 23/04 : présentation commencer sur Canva

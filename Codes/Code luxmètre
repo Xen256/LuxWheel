@@ -1,127 +1,78 @@
 /******************************************************************************
-LTR303 + FastLED Arduino
+LTR303 Arduino
 For UCA21
-Fabien Ferrero
-Aug, 2021
-
-Resources:
-Uses Wire.h for i2c operation
-
-Distributed as-is; no warranty is given.
+MODIFIED
 
 Use LTR303 light sensor
 
 Objective : This code will :
-    * plot on the serial port the 2 light value of the accelerometer +  luminosity
-    * use the LED to illustrate the luminosity from accelerometer
+    * use the light meter to move a servomotor
 ******************************************************************************/
-
-// Your sketch must #include this library, and the Wire library
-// (Wire is a standard library included with Arduino):
 
 #include <LTR303.h>
 #include <Wire.h>
 
-// Create an LTR303 object, here called "light":
+// Création d'un objet LTR303 nommé "light":
 LTR303 light;
 
-// Global variables:
-unsigned char gain;     // Gain setting, values = 0-7 
-unsigned char integrationTime;  // Integration ("shutter") time in milliseconds
-unsigned char measurementRate;  // Interval between DATA_REGISTERS update
+// Variable Globales:
+unsigned char gain;     // Valeur du gain comprise entre 0 et 7 (le gain permet d'augmenter la sensibilité du luxmètre)   
+unsigned char integrationTime;  // Temps en miliseconde pendant lequel le capteur absorbe la lumière avant de faire une mesure
 
 void setup() {
-  delay(3000); // power-up safety delay
-  // Initialize the Serial port:
+  delay(3000); // On laisse le luxmètre s'allumer doucement
+  // On initialize le Serial port:
   Serial.begin(115200);
 
-  // Initialize the LTR303 library
-  // 100ms 	initial startup time required
+  // On laisse le tout se reveiller
   delay(100);
 
-  // You can pass nothing to light.begin() for the default I2C address (0x29)
+  // On prépare le capteur (il ne prend pas encore de mesure mais est allumé)
   light.begin();
 
-  // Get factory ID from sensor:
-  // (Just for fun, you don't need to do this to operate the sensor)
-  unsigned char ID;
-  if (light.getPartID(ID)) {
-  }
-  else {
-    byte error = light.getError();
-    printError(error);
-  }
 
-  // Gain can take any value from 0-7, except 4 & 5
-  // If gain = 0, device is set to 1X gain (default)
+  // Le gain peut être entre 0 et 7 sauf 4 et 5
+  // La valeur de gain par défaut est 0
   gain = 0;
   light.setControl(gain, false, false);
 
-  // If integrationTime = 1, integrationTime will be 50ms
+  // Si integrationTime = 1 alors la durée sera de 50 ms
   integrationTime = 1;
   light.setMeasurementRate(integrationTime, 3);
 
-  // To start taking measurements, power up the sensor:
+  // On lance le capteur pour qu'il prenne des mesures :
   light.setPowerUp();
 
-  Serial.println("Data0:,Data1:,Lux:");   // Plot labels
+  Serial.println("Data0:,Data1:,Lux:");   // On affiche les titres dans le moniteur série
 }
 
 void loop() {
-  // Wait between measurements before retrieving the result
+  // On attend entre les mesures pour afficher les résultats 
   int ms = 50;
   delay(ms);
 
-  // Retrieve the data from the device:
+  // On récupère les données du luxmètre:
   unsigned int data0, data1;
-  double lux;    // Resulting lux value
-  boolean good;  // True if neither sensor is saturated
+  double lux;    // "double" = float donc on initialise une variable décimale lux 
+  boolean good;  // Si on sature aucun capteurs, cette valeur renvoie vrai
 
   if (light.getData(data0, data1)) {
-    // getData() returned true, communication was successful
+    // on teste la commmunication
     Serial.print(data1);
     Serial.print(" ");
     Serial.print(data0);
     Serial.print(" ");
 
-    // Perform lux calculation:
+    // On calcule la valeur du luxmètre en lux:
     good = light.getLux(gain, integrationTime, data0, data1, lux);
 
-    // Print out the results:
+    // On affiche le résultat dans le moniteur série:
     Serial.println(lux);
   }
   else {
-    // getData() returned false because of an I2C error, inform the user.
+    // getData() a renvoyé "False" à cause d'un problème I2C (donc capteur mal branché/mauvais endroits/etc...)
     byte error = light.getError();
     printError(error);
   }
 }
 
-void printError(byte error) {
-  // If there's an I2C error, this function will
-  // print out an explanation.
-
-  Serial.print("I2C error: ");
-  Serial.print(error, DEC);
-  Serial.print(", ");
-  
-  switch (error) {
-    case 0:
-      Serial.println("success");
-      break;
-    case 1:
-      Serial.println("data too long for transmit buffer");
-      break;
-    case 2:
-      Serial.println("received NACK on address (disconnected?)");
-      break;
-    case 3:
-      Serial.println("received NACK on data");
-      break;
-    case 4:
-      Serial.println("other error");
-      break;
-    default:
-      Serial.println("unknown error");
-  }
-}

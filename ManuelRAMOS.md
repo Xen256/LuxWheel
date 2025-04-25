@@ -1,2 +1,2 @@
-- Première séance  : tentative de création d'un powerpoint 
-- Modification du 23/04 : présentation commencer sur Canva
+- Première séance  : Début de la création et de la recherche du code luxmètre
+- Deuscième séance : Création fichier de la boite en 3d

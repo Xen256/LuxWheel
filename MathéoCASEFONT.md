@@ -11,3 +11,7 @@
 # Hors première séance 
 - Ajout du code luxmètre
 - Modification du README
+
+# Deuxième séance
+
+- Modification du code luxmètre 

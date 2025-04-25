@@ -12,3 +12,8 @@ De plus, ce système embarqué envoie ses mesures directement à un ordinateur c
 
 ### Materiel utilisé
 
+Carte : Carte UCA 
+Capteurs : LTR-303A (Lumière)
+Moteur : Moteur à courant continu (Moteur DC)
+Boitier : Imprimé en 3D
+Roue : Imprimée en 3D

@@ -3,10 +3,10 @@ LTR303 Arduino
 For UCA21
 MODIFIED
 
-Use LTR303 light sensor
+Utilisation du capteur luxmètre LTR303
 
-Objective : This code will :
-    * use the light meter to move a servomotor
+Objectif :
+    * Utiliser le résultat du luxmètre pour faire bouger un servomoteur
 ******************************************************************************/
 
 #include <LTR303.h>
@@ -57,7 +57,7 @@ void loop() {
   boolean good;  // Si on sature aucun capteurs, cette valeur renvoie vrai
 
   if (light.getData(data0, data1)) {
-    // on teste la commmunication
+    // On teste la commmunication
     Serial.print(data1);
     Serial.print(" ");
     Serial.print(data0);

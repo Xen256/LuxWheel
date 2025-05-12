@@ -1,78 +1,38 @@
-**********************************************************************
-LTR303 Arduino
-For UCA21
-MODIFIED
-
-Utilisation du capteur luxmètre LTR303
-
-Objectif :
-    * Utiliser le résultat du luxmètre pour faire bouger un servomoteur
-******************************************************************************/
-
-#include <LTR303.h>
 #include <Wire.h>
 
-// Création d'un objet LTR303 nommé "light":
-LTR303 light;
+#define LAPIN A3 // Le PIN A3 permet de recuperer la valeur analogique du luxmètre  
+#define LPPIN 7 // Le PIN 7 permet d'alimenter le luxmètre 
 
-// Variable Globales:
-unsigned char gain;     // Valeur du gain comprise entre 0 et 7 (le gain permet d'augmenter la sensibilité du luxmètre)   
-unsigned char integrationTime;  // Temps en miliseconde pendant lequel le capteur absorbe la lumière avant de faire une mesure
+
+static float light;
 
 void setup() {
-  delay(3000); // On laisse le luxmètre s'allumer doucement
-  // On initialize le Serial port:
-  Serial.begin(115200);
-
-  // On laisse le tout se reveiller
-  delay(100);
-
-  // On prépare le capteur (il ne prend pas encore de mesure mais est allumé)
-  light.begin();
-
-
-  // Le gain peut être entre 0 et 7 sauf 4 et 5
-  // La valeur de gain par défaut est 0
-  gain = 0;
-  light.setControl(gain, false, false);
-
-  // Si integrationTime = 1 alors la durée sera de 50 ms
-  integrationTime = 1;
-  light.setMeasurementRate(integrationTime, 3);
-
-  // On lance le capteur pour qu'il prenne des mesures :
-  light.setPowerUp();
-
-  Serial.println("Data0:,Data1:,Lux:");   // On affiche les titres dans le moniteur série
+    Serial.begin(115200); // Initialise la communication série à 115200 bauds
+    pinMode(LPPIN, OUTPUT); // On configure la broche 7 en sortie pour alimenter le luxmètre
+    
 }
 
 void loop() {
-  // On attend entre les mesures pour afficher les résultats 
-  int ms = 50;
-  delay(ms);
 
-  // On récupère les données du luxmètre:
-  unsigned int data0, data1;
-  double lux;    // "double" = float donc on initialise une variable décimale lux 
-  boolean good;  // Si on sature aucun capteurs, cette valeur renvoie vrai
-
-  if (light.getData(data0, data1)) {
-    // On teste la commmunication
-    Serial.print(data1);
-    Serial.print(" ");
-    Serial.print(data0);
-    Serial.print(" ");
-
-    // On calcule la valeur du luxmètre en lux:
-    good = light.getLux(gain, integrationTime, data0, data1, lux);
-
-    // On affiche le résultat dans le moniteur série:
-    Serial.println(lux);
-  }
-  else {
-    // getData() a renvoyé "False" à cause d'un problème I2C (donc capteur mal branché/mauvais endroits/etc...)
-    byte error = light.getError();
-    printError(error);
-  }
+    // Dans cette boucle on va appeler la fonction "readlight()" qui est une fonction qui permet de convertir la mesure en lux. 
+    // On va ensuite afficher la valeur sur le moniteur série (donc le pc) -> Ce serait bien d'envoyer ça en Lora sur le recepteurs plutôt
+    light = readLight(); 
+    
+    Serial.print("Light :");  
+    Serial.print(light);
+    Serial.println("Lx");
+    
+    delay(500); // On attend un peu pour pas spam      
 }
 
+float readLight() {
+  float result;
+digitalWrite(LPPIN, HIGH); // Allume le luxmètre
+delay(10); // On attend un peu le temps que le luxmètre s'allume
+int sensorValue = analogRead(LAPIN);
+  // On convertie la mesure analogique (qui va de 0 à 1023) en un voltage (de 0 à 3.3V):
+  float voltage = sensorValue * (3.3 / 1023.0); // Batvalue is 3.3V
+result = voltage*2000; // On multiplie le voltage par 2000 pour avoir la valeur en luxmètre
+digitalWrite(LPPIN, LOW); // éteint le luxmètre pour économiser de l'énergie
+  return result; // renvoie la valeur en Lux
+}

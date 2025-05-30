@@ -1,0 +1,50 @@
+#include <Wire.h>
+#include <Servo.h>
+
+#define LAPIN A3        // Broche du capteur de lumière
+#define LPPIN 7         // Alimentation du capteur
+#define SERVOPIN A2     // Broche de commande du servo
+
+static float light;
+Servo monServo;
+
+void setup() {
+    Serial.begin(115200); // On lance le moniteur série
+    pinMode(LPPIN, OUTPUT);
+    monServo.attach(SERVOPIN);
+}
+
+void loop() {
+    // Dans cette boucle on va appeler la fonction "readlight()" qui est une fonction qui permet de convertir la mesure en lux.
+    // On va ensuite utiliser les mesures pour gerer le servomoteur en utilisant la PWM
+    light = readLight();
+    // Ici on envoie les mesures dans le moniteur série. C'est plus pratique pour expliquer ce qu'il se passe
+    Serial.print("Light : ");
+    Serial.print(light);
+    Serial.println(" Lx");
+
+    int pwm;
+
+    if (light < 300) {
+        pwm = 110; // Si la lumière est faible alors le déplacement lent (mais jamais à l’arrêt)
+    } 
+    else {
+        // De 300 à 2000 lux → pwm entre 100 (lent) et 200 (très rapide)
+        pwm = map(constrain(light, 300, 3000), 300, 3000, 111, 200); //On fait en sorte de contenir les valeurs de Lux entre 300 et 3000 pour la fonction map qui nous permet de convertir nos lux en une valeur de PWM pour le servomoteur
+    }
+
+    monServo.write(pwm); // On envoie la commande au servomoteur
+
+    delay(500);
+}
+
+// Fonction de lecture lux
+float readLight() {
+    digitalWrite(LPPIN, HIGH); // Allume le luxmètre
+    delay(10); // On attend un peu le temps que le luxmètre s'allume
+    int sensorValue = analogRead(LAPIN);
+    float voltage = sensorValue * (3.3 / 1023.0);  // On convertie la mesure analogique (qui va de 0 à 1023) en un voltage (de 0 à 3.3V)
+    float result = voltage * 2000; // On multiplie le voltage par 2000 pour avoir la valeur en luxmètre
+    digitalWrite(LPPIN, LOW); // On éteint le luxmètre pour économiser de l'énergie
+    return result; // On renvoie la valeur en Lux
+}

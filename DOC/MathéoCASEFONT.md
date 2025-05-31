@@ -50,3 +50,4 @@
 
 - Impression du boitier et du couvercle
 - Mise en place de la communication sans fils
+- Assemblage final de LuxWheel

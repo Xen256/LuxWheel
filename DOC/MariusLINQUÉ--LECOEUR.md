@@ -35,11 +35,12 @@
 
 # Septième semaine
 
-- 
+- Présenatation finale continué
 - Fichiers boitier et couvercle finis
 
 # Huitième semaine
 
 - Impression du boitier et du couvercle
-- 
+- Finalisation de la présentation finale
+- Entrainement sur la présentation finale
 - Assemblage final de LuxWheel

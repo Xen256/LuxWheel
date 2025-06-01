@@ -8,7 +8,7 @@
 # Deuxième semaine
 
 - Changement d'outil pour la présentation (Canva)
-- Présentatino de mi projet partiellement fini
+- Présentation de mi projet partiellement fini
 - Prise en main de Github
 
 # Troisème semaine

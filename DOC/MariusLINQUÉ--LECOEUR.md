@@ -22,12 +22,11 @@
 
 - Reconsidération de la modélisation 3D
 - Présenation finale commencé sur les bases de la présentation de mi projet
-- 
 
 # Cinquième semaine
 
-- 
-- 
+- Débat sur la réalisation physique du projet
+- Présentation finale continué
 
 # Sixième semaine
 

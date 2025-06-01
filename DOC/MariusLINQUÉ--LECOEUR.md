@@ -21,7 +21,7 @@
 # Quatrième semaine
 
 - Reconsidération de la modélisation 3D
-- Présenation finale commencé sur les bases de la présentation de mi projet
+- Présentation finale commencé sur les bases de la présentation de mi projet
 
 # Cinquième semaine
 

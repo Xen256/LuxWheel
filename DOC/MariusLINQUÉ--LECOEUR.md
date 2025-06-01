@@ -43,4 +43,4 @@
 - Impression du boitier et du couvercle
 - Finalisation de la présentation finale
 - Entrainement sur la présentation finale
-- Assemblage final de LuxWheel
+- Assemblage final du projet

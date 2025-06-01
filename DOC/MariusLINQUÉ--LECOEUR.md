@@ -30,8 +30,8 @@
 
 # Sixième semaine
 
-- Nouveau fichier boitier (On s'est trompé dans les mesures et on s'est rendu compte que notre boitier n'était pas pratique)
-- Nouveau fichier couvercle (On a décidé de séparer les deux modèles pour que ce soit plus simple à imprimer)
+- Changement modélisation 3D boitier
+- Changement modélisation 3D couvercle
 
 # Septième semaine
 

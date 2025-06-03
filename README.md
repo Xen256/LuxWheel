@@ -10,6 +10,14 @@ Son fonctionnement est simple : plus l'intensité lumineuse mesurée est haute, 
 Ce système crée donc une interaction directe entre la lumière et le mouvement, transformant la luminositée en vitesse de rotation.
 De plus, ce système embarqué envoie ses mesures directement à un ordinateur connecté au boitier.
 
+
+
+
+
+![photo-face](DOC/
+
+
+
 ### Materiel utilisé
 
 - Carte : Carte UCA 

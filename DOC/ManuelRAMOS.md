@@ -20,12 +20,12 @@
 # Quatrième et Cinquième semaine 
 
 - Début de la mise en place physique du projet
-- test des différents codes
+- Test des différents codes
   
 # Sixième et Septième semaine
 
 - Re-création des fichiers 3d adaptés au bonne tailles réelles
-- mise en place pour impression 3d
+- Mise en place pour impression 3d
 
 # Huitième semaine
 

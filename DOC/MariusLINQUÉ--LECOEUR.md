@@ -44,3 +44,5 @@
 - Finalisation de la présentation finale
 - Entrainement sur la présentation finale
 - Assemblage final du projet
+
+# Présentation de fin de projet

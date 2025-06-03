@@ -51,5 +51,6 @@
 - Impression du boitier et du couvercle
 - Mise en place de la communication sans fils
 - Assemblage final de LuxWheel
+- Entrainement pour la présentation finale du projet
 
 # Présentation de fin de projet

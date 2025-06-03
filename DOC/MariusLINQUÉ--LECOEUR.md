@@ -42,7 +42,7 @@
 
 - Impression du boitier et du couvercle
 - Finalisation de la présentation finale
-- Entrainement sur la présentation finale
 - Assemblage final du projet
+- Entrainement sur la présentation finale
 
 # Présentation de fin de projet

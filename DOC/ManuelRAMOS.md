@@ -12,7 +12,7 @@
 # Troisème semaine 
 
 - Contribution à la création du diaporama de mi présentation
-- Début de la création 3d du boitier
+- Aide sur modification modélisation 3D
 
 # Présentation de milieu de projet
 

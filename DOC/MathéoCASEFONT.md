@@ -7,20 +7,21 @@
 
 - Création du github
 - Apprentissage GIT sous Linux
+- Ajout de Marius et Manuel en collaborateur sur le github
 - Ajout de ce fichier compte rendu
 - Création du répertoire "Code"
+- Création de la liste des composants
 - Modification du code luxmètre
-- Modification du fichier 3D du boitier
-- Ajout de Marius et Manuel en collaborateur sur le github
 - Ajout de la liste des composants
 - Ajout du code luxmètre
 - Modification du README
-- Création de la liste des composants
+- Travail sur le fichier 3D du boitier
 
 # Troisème semaine
 
 - Finition du fichier 3D du boitier et du couvercle
 - Finition du code luxmètre
+- Entrainement présentation de mi projet
 
 # Présentation de milieu de projet
 

@@ -27,10 +27,13 @@
 - Début de la mise en place physique du projet
 - Test code servomoteur
   
-# Sixième et Septième semaine
+# Sixième semaine
 
-- Modification des fichiers 3d adaptés au bonne tailles réelles
-- Modélisation 3D terminé
+- Modification des fichiers 3d adaptés aux bonnes tailles réelles
+
+# Septième semaine
+
+- Modélisation 3D terminés
 - Mise en place pour impression 3d
 
 # Huitième semaine

@@ -27,12 +27,12 @@
 
 # Quatrième semaine 
 
-- Tests de chacun des composants
 - Etudes des différentes limites des composants
-- Application du code luxmètre en condition réelles
+- Application du code luxmètre en condition réelles (erreur)
 
 # Cinquième semaine
 
+- Tests de chacun des composants
 - Modification du code luxmètre pour le transformer en code LuxWheel
 - Ajout de la partie servomoteur (il n'y a pas encore la gestion de la vitesse par rapport à la lumière)
 

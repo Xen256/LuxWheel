@@ -13,7 +13,7 @@
 
 # Troisème semaine
 
-- Finalisation de la présenatation
+- Finalisation de la présentation de mi projet
 - Entrainement sur la présentation de mi projet
 
 # Présentation de milieu de projet

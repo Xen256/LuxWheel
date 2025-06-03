@@ -14,7 +14,7 @@ De plus, ce système embarqué envoie ses mesures directement à un ordinateur c
 
 
 
-![photo-face](DOC/
+![photo-face](DOC/luxwheelpic.jpg)
 
 
 

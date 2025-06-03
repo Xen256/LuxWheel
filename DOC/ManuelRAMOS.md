@@ -3,7 +3,6 @@
 - Reflexion sur le projet
 - Recherche des différents objectif à passer durant le projet
 - Apprentissage du fonctionnement du github
-- Ajout de la liste des composants
 
 
 # Deuxième semaine

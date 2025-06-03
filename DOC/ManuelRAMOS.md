@@ -17,10 +17,15 @@
 
 # Présentation de milieu de projet
 
-# Quatrième et Cinquième semaine 
+# Quatrième semaine 
+
+- Constat que les fichiers 3D sont pas au bonne mesure
+- Analyse des différents composants en réel
+
+# Cinquième semaine 
 
 - Début de la mise en place physique du projet
-- Test des différents codes
+- Test code servomoteur
   
 # Sixième et Septième semaine
 

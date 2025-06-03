@@ -21,7 +21,7 @@
 
 - Finition du fichier 3D du boitier et du couvercle
 - Finition du code luxmètre
-- Entrainement présentation de mi projet
+- Entrainement pour la présentation de mi projet
 
 # Présentation de milieu de projet
 

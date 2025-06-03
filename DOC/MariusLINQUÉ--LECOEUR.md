@@ -10,7 +10,7 @@
 - Commencement des diapos sur PowerPoint
 - Prise en main de Github
 
-# Troisème semaine
+# Troisième semaine
 
 - Changement d'outil pour la présentation (Canva)
 - Finalisation de la présentation de mi projet

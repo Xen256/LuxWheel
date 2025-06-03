@@ -9,7 +9,7 @@
 - Recherche du code luxmettre
 - Aide à la création d'un croquis du projet
 
-# Troisème semaine 
+# Troisième semaine 
 
 - Contribution à la création du diaporama de mi présentation
 - Aide sur modification modélisation 3D

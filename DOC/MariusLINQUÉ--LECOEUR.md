@@ -35,8 +35,8 @@
 
 # Septième semaine
 
-- Présentation finale presque terminé
 - Les fichiers 3D du boitier et de son couvercle on été terminé
+- Présentation finale presque terminé
 
 # Huitième semaine
 

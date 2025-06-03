@@ -36,7 +36,7 @@
 # Septième semaine
 
 - Présentation finale continué
-- Fichiers boitier et couvercle finis
+- Fichiers boitier et couvercle 3D finis
 
 # Huitième semaine
 

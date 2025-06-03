@@ -7,7 +7,7 @@ SERIAL_PORT = '/dev/ttyUSB0'
 BAUD_RATE = 115200
 
 sender = 'luxwheeluca21@gmail.com'
-receiver = 'casefont.matheo@gmail.com'
+receiver = ''
 app_password = 'atxi fxfd sgtr byvk'
 
 yag = yagmail.SMTP(sender, app_password)

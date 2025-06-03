@@ -25,6 +25,7 @@
 # Sixième et Septième semaine
 
 - Modification des fichiers 3d adaptés au bonne tailles réelles
+- Modélisation 3D terminé
 - Mise en place pour impression 3d
 
 # Huitième semaine

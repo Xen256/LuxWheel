@@ -30,8 +30,8 @@
 
 # Sixième semaine
 
-- Changement modélisation 3D boitier
-- Changement modélisation 3D couvercle
+- Changement modélisation 3D boitier car les mesures n'étaient pas bonne
+- Changement modélisation 3D couvercle pour faciliter l'impression
 
 # Septième semaine
 

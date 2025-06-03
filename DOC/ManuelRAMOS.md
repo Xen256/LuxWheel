@@ -24,7 +24,7 @@
   
 # Sixième et Septième semaine
 
-- Re-création des fichiers 3d adaptés au bonne tailles réelles
+- Modification des fichiers 3d adaptés au bonne tailles réelles
 - Mise en place pour impression 3d
 
 # Huitième semaine

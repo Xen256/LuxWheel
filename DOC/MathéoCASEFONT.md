@@ -1,7 +1,7 @@
 # Première semaine
 
 - Débat sur le choix du projet
-- Schéma global du projet 
+- Étude des composants disponible
 
 # Deuxième semaine
 

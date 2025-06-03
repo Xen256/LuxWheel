@@ -1,19 +1,21 @@
 # Première semaine
 
+- Débat sur le choix du projet
+- Schéma global du projet 
+
+# Deuxième semaine
+
 - Création du github
-- Ajout de Marius et Manuel en collaborateur sur le github
 - Apprentissage GIT sous Linux
 - Ajout de ce fichier compte rendu
 - Création du répertoire "Code"
+- Modification du code luxmètre
+- Modification du fichier 3D du boitier
+- Ajout de Marius et Manuel en collaborateur sur le github
 - Ajout de la liste des composants
 - Ajout du code luxmètre
 - Modification du README
 - Création de la liste des composants
-
-# Deuxième semaine
-
-- Modification du code luxmètre
-- Modification du fichier 3D du boitier
 
 # Troisème semaine
 

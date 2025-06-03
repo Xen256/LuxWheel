@@ -31,7 +31,7 @@
 # Huitième semaine
 
 - Impression du boitier et du couvercle
-- Aide à la création du diaporama final
+- Aide à la finalisation du diaporama final
 - Aide à l'assemblage final du projet luxwheel
 
 # Présentation de fin de projet

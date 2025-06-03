@@ -2,11 +2,10 @@
 
 - Reflexion sur le projet
 - Recherche des différents objectif à passer durant le projet
-- Apprentissage du fonctionnement du github
-
 
 # Deuxième semaine
 
+- Apprentissage du fonctionnement du github
 - Recherche du code luxmettre
 - Aide à la création d'un croquis du projet
 

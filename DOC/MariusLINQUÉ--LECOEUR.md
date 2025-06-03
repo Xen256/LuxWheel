@@ -2,17 +2,17 @@
 
 - Réflexion sur le choix du projet
 - Débat sur la structure du projet
-- Commencement des diapos sur PowerPoint
+
 - Tentative création fichier 3D boitier 
 
 # Deuxième semaine
 
-- Changement d'outil pour la présentation (Canva)
-- Présentation de mi projet partiellement fini
+- Commencement des diapos sur PowerPoint
 - Prise en main de Github
 
 # Troisème semaine
 
+- Changement d'outil pour la présentation (Canva)
 - Finalisation de la présentation de mi projet
 - Entrainement sur la présentation de mi projet
 

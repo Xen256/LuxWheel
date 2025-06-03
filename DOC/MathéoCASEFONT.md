@@ -17,7 +17,7 @@
 - Modification du README
 - Travail sur le fichier 3D du boitier
 
-# Troisème semaine
+# Troisième semaine
 
 - Finition du fichier 3D du boitier et du couvercle
 - Finition du code luxmètre

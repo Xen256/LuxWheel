@@ -2,10 +2,11 @@
 
 - Réflexion sur le choix du projet
 - Débat sur la structure du projet
-- Tentative création fichier 3D boitier 
+
 
 # Deuxième semaine
 
+- Tentative création fichier 3D boitier 
 - Commencement des diapos sur PowerPoint
 - Prise en main de Github
 

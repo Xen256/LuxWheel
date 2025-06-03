@@ -32,6 +32,6 @@
 
 - Impression du boitier et du couvercle
 - Aide à la finalisation du diaporama final
-- Aide à l'assemblage final du projet luxwheel
+- Aide à l'assemblage final du projet LuxWheel
 
 # Présentation de fin de projet

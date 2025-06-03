@@ -13,7 +13,7 @@
 
 - Contribution à la création du diaporama de mi présentation
 - Aide sur modification modélisation 3D
-- Entrainemennt présentation de mi projet
+- Entrainement présentation de mi projet
 
 # Présentation de milieu de projet
 
